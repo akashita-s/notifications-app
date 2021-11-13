@@ -39,6 +39,13 @@ export default function Home() {
     }, 4000);
   };
 
+  const button = [
+    { key: 0, name: "Show Notification 1", click: one },
+    { key: 1, name: "Show Notification 2", click: two },
+    { key: 2, name: "Show Notification 3", click: three },
+    { key: 3, name: "Clear All", click: clearall },
+  ];
+
   return (
     <div>
       <Head>
@@ -47,38 +54,17 @@ export default function Home() {
 
       <div className={styles.App}>
         <div className={styles.buttonContainer}>
-          <button
-            className={styles.showSnackbarBttn}
-            onClick={() => {
-              one();
-            }}
-          >
-            Show Notification 1
-          </button>
-          <button
-            className={styles.showSnackbarBttn}
-            onClick={() => {
-              two();
-            }}
-          >
-            Show Notification 2
-          </button>
-          <button
-            className={styles.showSnackbarBttn}
-            onClick={() => {
-              three();
-            }}
-          >
-            Show Notification 3
-          </button>
-          <button
-            className={styles.showSnackbarBttn}
-            onClick={() => {
-              clearall();
-            }}
-          >
-            Clear All
-          </button>
+          {button.map((item) => (
+            <button
+              key={item.key}
+              className={styles.showSnackbarBttn}
+              onClick={() => {
+                item.click();
+              }}
+            >
+              {item.name}
+            </button>
+          ))}
         </div>
         <div className={styles.notificationContainer}>
           {show ? (

@@ -1,16 +1,13 @@
 import React, { useState } from "react";
 import styles from "./Snackbar.module.css";
 
-import { useDispatch } from "react-redux";
 const Snackbar = (props) => {
-  const dispatch = useDispatch();
-
   return (
     <div
       className={styles.snackbar}
       style={{
         backgroundColor: props.color,
-        top : props.top,
+        top: props.top,
         color: "black",
       }}
     >
