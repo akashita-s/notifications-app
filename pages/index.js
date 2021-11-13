@@ -78,12 +78,12 @@ export default function Home() {
         >
           Clear All
         </button>
+        <div className={styles.notificationContainer}>
         {show ? (
           <Snackbar
             ref={snackbarRef}
             message="Task Completed Successfully!"
             color="#00F593"
-            top="5%"
             onClick={() => {
               dispatch(changeShow(false));
             }}
@@ -94,7 +94,6 @@ export default function Home() {
             ref={snackbarRef}
             message="Message Sent Successfully!"
             color="#fcba03"
-            top="15%"
             onClick={() => {
               dispatch(changeShowTwo(false));
             }}
@@ -105,12 +104,12 @@ export default function Home() {
             ref={snackbarRef}
             message="Mail Recieved Successfully!"
             color="#FF0033"
-            top="25%"
             onClick={() => {
               dispatch(changeShowThree(false));
             }}
           />
         ) : null}
+        </div>
       </div>
     </div>
   );

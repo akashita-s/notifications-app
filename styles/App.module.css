@@ -24,3 +24,10 @@
     color: white;
     font-size: 20px;
   }
+
+  .notificationContainer{
+    position: fixed;
+    left: 50%;
+    top: 5%;
+    
+  }

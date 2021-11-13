@@ -1,7 +1,6 @@
 
 .snackbar {
-    position: fixed;
-    left: 50%;
+    margin: 20px;
     transform: translate(-50%, -50%);
     width: 350px;
     height: 60px;
@@ -9,7 +8,7 @@
     display: flex;
     align-items: center;
     text-align: center;
-    animation: fadeIn 0.5s, 2.5s;
+    animation: fadeIn 0.5s, fadeOut 0.5s 3.6s;
   }
   
   .snackbar .symbol {
