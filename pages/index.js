@@ -46,69 +46,71 @@ export default function Home() {
       </Head>
 
       <div className={styles.App}>
-        <button
-          className={styles.showSnackbarBttn}
-          onClick={() => {
-            one();
-          }}
-        >
-          Show Notification 1
-        </button>
-        <button
-          className={styles.showSnackbarBttn}
-          onClick={() => {
-            two();
-          }}
-        >
-          Show Notification 2
-        </button>
-        <button
-          className={styles.showSnackbarBttn}
-          onClick={() => {
-            three();
-          }}
-        >
-          Show Notification 3
-        </button>
-        <button
-          className={styles.showSnackbarBttn}
-          onClick={() => {
-            clearall();
-          }}
-        >
-          Clear All
-        </button>
+        <div className={styles.buttonContainer}>
+          <button
+            className={styles.showSnackbarBttn}
+            onClick={() => {
+              one();
+            }}
+          >
+            Show Notification 1
+          </button>
+          <button
+            className={styles.showSnackbarBttn}
+            onClick={() => {
+              two();
+            }}
+          >
+            Show Notification 2
+          </button>
+          <button
+            className={styles.showSnackbarBttn}
+            onClick={() => {
+              three();
+            }}
+          >
+            Show Notification 3
+          </button>
+          <button
+            className={styles.showSnackbarBttn}
+            onClick={() => {
+              clearall();
+            }}
+          >
+            Clear All
+          </button>
+        </div>
         <div className={styles.notificationContainer}>
-        {show ? (
-          <Snackbar
-            ref={snackbarRef}
-            message="Task Completed Successfully!"
-            color="#00F593"
-            onClick={() => {
-              dispatch(changeShow(false));
-            }}
-          />
-        ) : null}
-        {showtwo ? (
-          <Snackbar
-            ref={snackbarRef}
-            message="Message Sent Successfully!"
-            color="#fcba03"
-            onClick={() => {
-              dispatch(changeShowTwo(false));
-            }}
-          />
-        ) : null}
-        {showthree ? (
-          <Snackbar
-            ref={snackbarRef}
-            message="Mail Recieved Successfully!"
-            color="#FF0033"
-            onClick={() => {
-              dispatch(changeShowThree(false));
-            }}
-          />
-        ) : null}
+          {show ? (
+            <Snackbar
+              ref={snackbarRef}
+              message="Task Completed Successfully!"
+              color="#00F593"
+              onClick={() => {
+                dispatch(changeShow(false));
+              }}
+            />
+          ) : null}
+          {showtwo ? (
+            <Snackbar
+              ref={snackbarRef}
+              message="Message Sent Successfully!"
+              color="#fcba03"
+              onClick={() => {
+                dispatch(changeShowTwo(false));
+              }}
+            />
+          ) : null}
+          {showthree ? (
+            <Snackbar
+              ref={snackbarRef}
+              message="Mail Recieved Successfully!"
+              color="#FF0033"
+              onClick={() => {
+                dispatch(changeShowThree(false));
+              }}
+            />
+          ) : null}
         </div>
       </div>
     </div>

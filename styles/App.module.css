@@ -31,3 +31,14 @@
     top: 5%;
     
   }
+
+  .buttonContainer{
+    display: flex;
+  }
+
+  @media (max-width: 600px) {
+    .buttonContainer{
+      display: flex;
+      flex-direction: column;
+    }
+  }
